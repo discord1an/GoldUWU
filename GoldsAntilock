@@ -9,5 +9,7 @@ local L,u,D=nil,nil,nil([[
 
 
 
---disable feature
+--disable feature(s)
 game:GetService("RunService").heartbeat:Connect(function()if getgenv().Disable==true then getgenv().Antilock=false;getgenv().AntiResolver=false;getgenv().Drop=0 end end)
+game:GetService("RunService").heartbeat:Connect(function()if getgenv().AntiResolver==true then getgenv().Antilock=false end end)
+game:GetService("RunService").heartbeat:Connect(function()if getgenv().Antilock==true then getgenv().AntiResolver=false end end)
